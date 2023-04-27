@@ -1,32 +1,21 @@
-name: my-zxc
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
+name: Build and Deploy
+on: [push]
 jobs:
-  build:
-    # 运行 ubuntu虚拟机系统
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 获取代码
-      - name: 迁出代码
-        # 使用action库 action/checkout获取代码
-        uses: actions/checkout@master
-      # 安装node
-        - name: 安装node.js
-        # 使用action库  actions/setup-node安装node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 18.0.0
-        - name: 安装pnpm
-          run: npm install -g pnpm
-        # 安装依赖
-        - name: install
-          run: pnpm run install
-        # 打包
-        - name: build
-          run: pnpm run build
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2 
 
+      - name: Install and Build 🔧 
+        run: |
+          pnpm install
+          pnpm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
