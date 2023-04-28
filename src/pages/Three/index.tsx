@@ -1,5 +1,5 @@
 import './style.scss';
-const HomePage: React.FC = () => {
+const ThreePage: React.FC = () => {
   return (
     <div className="home-wrap">
       <div className="content">
@@ -10,4 +10,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default ThreePage;

@@ -1,0 +1,52 @@
+.ant-pro-layout {
+  // 全局背景
+  .ant-pro-layout-bg-list {
+    background: black;
+  }
+  // 侧边栏
+  .ant-pro-sider {
+    // 用户头像
+    .ant-pro-sider-logo > a > img {
+      border-radius: 11px;
+    }
+    // 用户和菜单
+    .ant-pro-sider-logo > a > h1,
+    .ant-menu-item {
+      color: white;
+    }
+    .ant-menu-item:hover {
+      color: pink !important;
+    }
+    .ant-menu-item-selected {
+      color: white;
+      background-color: rgba($color: pink, $alpha: 0.5);
+    }
+    // 线条
+    .ant-layout-sider-children,
+    .ant-pro-sider-logo {
+      border-color: rgba($color: pink, $alpha: 0.5);
+    }
+    // 收起图标
+    .ant-pro-sider-collapsed-button {
+      background-color: rgba($color: pink, $alpha: 0.8);
+      svg {
+        color: white;
+      }
+    }
+    // 侧边栏footer
+    .ant-pro-sider-actions {
+      .ant-avatar-sm {
+        width: 0;
+      }
+      .umi-plugin-layout-name {
+        color: white;
+        margin-left: -15px;
+      }
+    }
+    // 菜单图标
+    .anticon-heart,
+    .anticon-copy {
+      color: pink;
+    }
+  }
+}
