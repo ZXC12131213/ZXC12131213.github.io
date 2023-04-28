@@ -25,7 +25,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         GITHUB_TOKEN: ${{ github.token }}
-        MAKE_COMMAND: "make html"
+        # MAKE_COMMAND: "make html"
         # Write the branch name for storing github pages source 
         PAGES_BRANCH: "gh-pages"
         # Write the branch name having source files for site/documentation
