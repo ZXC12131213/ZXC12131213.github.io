@@ -20,9 +20,10 @@ jobs:
       run: pnpm install --no-frozen-lockfile
     - name: 打包
       run: pnpm run build
-    - name: Deploy to Server
-      uses: JamesIves/github-pages-deploy-action@v4.3.0
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist
+    - name: 部署到服务器
+      uses: JamesIves/github-pages-deploy-action@releases/v3 # 脚本来自： https://github.com/JamesIves/github-pages-deploy-action
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          CLEAN: true
