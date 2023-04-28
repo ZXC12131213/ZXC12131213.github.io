@@ -53,3 +53,4 @@ jobs:
         BUILD_FROM: "main"
         # Write the name of the output folder where generated html is stored by makefile.
         DOCS_FOLDER: "dist"
+        
