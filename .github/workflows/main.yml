@@ -28,20 +28,14 @@ jobs:
     - name: 打包
       run: pnpm run build
     - name: 部署到服务器
-    - uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: docs/html
-          config_file: Doxyfile
-      # uses: avinal/github-pages-deploy-action@main
-      # env:
-      #   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      #   GITHUB_TOKEN: ${{ github.token }}
-      #   MAKE_COMMAND: "make html"
-      #   # Write the branch name for storing github pages source 
-      #   PAGES_BRANCH: "gh-pages"
-      #   # Write the branch name having source files for site/documentation
-      #   BUILD_FROM: "main"
-      #   # Write the name of the output folder where generated html is stored by makefile.
-      #   DOCS_FOLDER: "dist"
+      uses: avinal/github-pages-deploy-action@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        GITHUB_TOKEN: ${{ github.token }}
+        MAKE_COMMAND: "make html"
+        # Write the branch name for storing github pages source 
+        PAGES_BRANCH: "gh-pages"
+        # Write the branch name having source files for site/documentation
+        BUILD_FROM: "main"
+        # Write the name of the output folder where generated html is stored by makefile.
+        DOCS_FOLDER: "dist"
