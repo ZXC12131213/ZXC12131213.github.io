@@ -1,24 +1,3 @@
-
-# name: Build and Deploy
-# on: [push]
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout 🛎️
-#         uses: actions/checkout@v2 
-
-#       - name: Install and Build 🔧 
-#         run: |
-#           pnpm install
-#           pnpm run build
-
-#       - name: Deploy 🚀
-#         uses: easingthemes/ssh-deploy@v2.1.1
-#         with:
-#           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-#           BRANCH: gh-pages
-#           FOLDER: dist
 name: Node CI
 
 on: [push]
@@ -53,4 +32,3 @@ jobs:
         BUILD_FROM: "main"
         # Write the name of the output folder where generated html is stored by makefile.
         DOCS_FOLDER: "dist"
-        
