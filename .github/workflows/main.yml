@@ -21,14 +21,8 @@ jobs:
     - name: 打包
       run: pnpm run build
     - name: Deploy to Server
-      uses: avinal/github-pages-deploy-action@main
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        GITHUB_TOKEN: ${{ github.token }}
-        # MAKE_COMMAND: "make html"
-        # Write the branch name for storing github pages source 
-        PAGES_BRANCH: "gh-pages"
-        # Write the branch name having source files for site/documentation
-        BUILD_FROM: "main"
-        # Write the name of the output folder where generated html is stored by makefile.
-        DOCS_FOLDER: "dist"
+      uses: JamesIves/github-pages-deploy-action@v4.3.0
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
