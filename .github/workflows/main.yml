@@ -38,7 +38,7 @@ jobs:
     - name: 安装pnpm
       run: npm install -g pnpm  
     - name: 安装依赖
-      run: pnpm install
+      run: pnpm install --no-frozen-lockfile
     - name: 打包
       run: pnpm run build
     - name: Deploy to Server
