@@ -14,7 +14,7 @@ jobs:
           pnpm run build
 
       - name: Deploy 🚀
-        uses: zxc12131213/ssh-deploy@v2.1.1
+        uses: encentCloudBase/cloudbase-action@v2.0.1
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
