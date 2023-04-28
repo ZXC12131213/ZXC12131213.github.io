@@ -30,14 +30,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Install Node.js
+    - name: 安装node
       uses: actions/setup-node@v3
       with:
         node-version: '18.x'
-    - name: Install npm dependencies
+    - name: 安装pnpm
+      run: npm install -g pnpm  
+    - name: 安装依赖
       run: pnpm install
-    - name: Run build task
-      run: pnpm run build --if-present
+    - name: 打包
+      run: pnpm run build
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@main
       env:
