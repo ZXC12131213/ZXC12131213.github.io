@@ -18,4 +18,5 @@ export default defineConfig({
   },
   routes: routes,
   npmClient: 'pnpm',
+  history: { type: 'hash' },
 });
