@@ -5,15 +5,17 @@ const routes = [
   },
   {
     icon: 'HeartFilled',
-    name: '超的首页呀！',
+    name: '开战',
     path: '/home',
     component: './Home',
+    menuRender: false,
+    hideInMenu: true,
   },
   {
-    icon: 'CopyFilled',
-    name: '3D效果(three.js)',
-    path: '/three',
-    component: './Three',
+    icon: 'PaperClipOutlined',
+    name: '贪吃蛇游戏(原生)',
+    path: '/snake',
+    component: './Snake',
   },
 ];
 
