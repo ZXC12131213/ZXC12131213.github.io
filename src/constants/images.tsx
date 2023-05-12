@@ -1,5 +1,10 @@
 const UP_GRADE = (
   <svg
+    className="home-title-letter home-title-icon"
+    style={{
+      animationDelay: '0.2s',
+    }}
+    key="UP_GRADE"
     viewBox="0 0 1024 1024"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

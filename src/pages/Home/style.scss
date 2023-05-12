@@ -1,22 +1,88 @@
 .home-wrap {
-  display: flex;
-  align-items: center;
   height: 100vh;
-  padding-left: 70px;
   width: 100vw;
-  .content {
-    text-shadow: 0 0 10px var(--pink-heavy), 0 0 10px var(--pink-heavy),
-      0 0 10px var(--pink-heavy);
-    .content-title {
-      display: flex;
-      align-items: center;
-      font-size: 52px;
-      font-weight: 600;
-      margin-bottom: 40px;
-    }
-    .content-description {
-      font-size: 20px;
-      font-weight: 500;
+  overflow: hidden;
+  .home-mask {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-left: 70px;
+    background-color: rgba(black, 0.5);
+    .home {
+      text-shadow: 0 0 10px var(--pink-heavy), 0 0 10px var(--pink-heavy),
+        0 0 10px var(--pink-heavy);
+      .home-title {
+        padding: 32px;
+        position: relative;
+        font-size: 52px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        letter-spacing: 3px;
+        display: flex;
+        align-items: center;
+        .home-title-letter {
+          display: inline-block;
+          opacity: 0;
+          transform: scale(0);
+          animation: fadeIn 2.4s forwards;
+        }
+
+        // title 竖线
+        &::before,
+        &::after {
+          position: absolute;
+          content: '';
+          top: 0;
+          bottom: 0;
+          width: 6px;
+          height: 70%;
+          background: white;
+          opacity: 0;
+          margin-top: 22px;
+          transform: scale(0);
+        }
+
+        &::before {
+          left: 50%;
+          animation: slideLeft 1.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
+        }
+
+        &::after {
+          right: 50%;
+          animation: slideRight 1.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
+        }
+
+        // title 文字 动画
+        @keyframes fadeIn {
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        // title 竖线 动画
+        @keyframes slideLeft {
+          to {
+            left: 0;
+            opacity: 1;
+            transform: scale(0.9);
+          }
+        }
+
+        @keyframes slideRight {
+          to {
+            right: 180px;
+            opacity: 1;
+            transform: scale(0.9);
+          }
+        }
+      }
+
+      .home-description {
+        font-size: 20px;
+        font-weight: 500;
+      }
     }
   }
 }

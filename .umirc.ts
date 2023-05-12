@@ -14,7 +14,7 @@ export default defineConfig({
   initialState: {},
   request: {},
   layout: {
-    title: '超早睡超晚起',
+    title: '超早睡超晚起>>开战',
   },
   routes: routes,
   npmClient: 'pnpm',
