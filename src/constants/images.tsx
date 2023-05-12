@@ -1,6 +1,6 @@
 const UP_GRADE = (
   <svg
-    className="home-title-letter home-title-icon"
+    className="home-title-letter"
     style={{
       animationDelay: '0.2s',
     }}
