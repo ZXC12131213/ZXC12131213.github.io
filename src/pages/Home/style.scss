@@ -9,6 +9,8 @@
     width: 100%;
     padding-left: 70px;
     background-color: rgba(black, 0.5);
+    position: relative;
+
     .home {
       height: 220px;
       text-shadow: 0 0 5px var(--pink-heavy), 0 0 5px var(--pink-heavy);
@@ -86,7 +88,7 @@
       }
 
       .home-description {
-        font-size: 20px;
+        font-size: 21px;
         font-weight: 500;
         .home-description-letter {
           display: inline-block;
@@ -103,6 +105,11 @@
             }
           }
         }
+      }
+      .home-go {
+        position: absolute;
+        bottom: 20%;
+        right: 20%;
       }
     }
   }

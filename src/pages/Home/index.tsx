@@ -89,7 +89,7 @@ const HomePage: React.FC = () => {
             })}
           </div>
           {showdDescription && (
-            <div className="home-description ">
+            <div className="home-description light">
               {description
                 .split('')
                 .map((letter: string, indexDescription: number) => (
@@ -105,13 +105,14 @@ const HomePage: React.FC = () => {
                 ))}
             </div>
           )}
-          <Button
+          <div
+            className="home-go"
             onClick={() => {
               history.push('/snake');
             }}
           >
-            开战......
-          </Button>
+            开战
+          </div>
         </div>
       </div>
     </div>
