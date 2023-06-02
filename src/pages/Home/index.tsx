@@ -24,11 +24,27 @@ const description = `划此前端结界，闭环修炼，踩各种坑，历各�
 const HomePage: React.FC = () => {
   const [vanta, setVanta] = useState<any>(0);
   const [showdDescription, setShowdDescription] = useState<boolean>(false);
+  const [showdBtn, setShowdBtn] = useState<boolean>(false);
   const vantaRef = useRef(null);
+
+  let descriptionTimer: NodeJS.Timeout;
+  let btnTimer: NodeJS.Timeout;
+
+  const uninstall = () => {
+    clearTimeout(descriptionTimer);
+    clearTimeout(btnTimer);
+  };
+
   useEffect(() => {
-    setTimeout(() => {
+    descriptionTimer = setTimeout(() => {
       setShowdDescription(true);
     }, 2200);
+
+    btnTimer = setTimeout(() => {
+      setShowdBtn(true);
+    }, 7000);
+
+    return uninstall;
   }, []);
 
   useEffect(() => {
@@ -105,14 +121,16 @@ const HomePage: React.FC = () => {
                 ))}
             </div>
           )}
-          <div
-            className="home-go"
-            onClick={() => {
-              history.push('/snake');
-            }}
-          >
-            开战
-          </div>
+          {showdBtn && (
+            <div
+              className="home-btn btn-shine"
+              onClick={() => {
+                history.push('/snake');
+              }}
+            >
+              开战
+            </div>
+          )}
         </div>
       </div>
     </div>
