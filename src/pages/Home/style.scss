@@ -10,7 +10,22 @@
     padding-left: 70px;
     background-color: rgba(black, 0.5);
     position: relative;
-
+    .home-bird {
+      position: absolute;
+      right: 32px;
+      top: 48px;
+      display: flex;
+      align-items: center;
+      .home-bird-slider {
+        width: 100px;
+      }
+      .ant-slider-rail {
+        background-color: #ffffff;
+      }
+      .ant-slider-track {
+        background-color: pink;
+      }
+    }
     .home {
       height: 220px;
       text-shadow: 0 0 5px var(--pink-heavy), 0 0 5px var(--pink-heavy);
@@ -115,7 +130,7 @@
       .home-btn {
         position: absolute;
         bottom: 20%;
-        right: 20%;
+        right: 120px;
         padding: 8px 32px;
         font-size: 20px;
         border: 2px solid var(--pink-heavy);
