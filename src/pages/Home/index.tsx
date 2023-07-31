@@ -72,7 +72,7 @@ const HomePage: React.FC = () => {
             <div className="home-bird-text">size of bird ：</div>
             <Slider
               className="home-bird-slider"
-              defaultValue={4}
+              defaultValue={3}
               max={4}
               min={0.5}
               step={0.1}
