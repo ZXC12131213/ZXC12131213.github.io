@@ -2,31 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Slider } from 'antd';
 import { history } from '@umijs/max';
 import BIRDS from 'vanta/dist/vanta.birds.min';
-import { UP_GRADE } from '@/constants';
-import { BIRED_OPTION } from './constants';
+import { BIRED_OPTION, TITLE_DATA } from './constants';
 import type { TitleType } from './types';
 import './style.scss';
 
-const titleData: TitleType[] = [
-  {
-    id: 'first',
-    value: '踩坑升级',
-  },
-  {
-    id: 'icon',
-    value: UP_GRADE,
-  },
-  {
-    id: 'last',
-    value: '修成正果',
-  },
-];
-const description = `划此前端结界，闭环修炼，踩坑，历劫，励志菜鸟变大佬，飞升成"神"......`;
 const HomePage: React.FC = () => {
   const [vanta, setVanta] = useState<any>(0);
   const [showdDescription, setShowdDescription] = useState<boolean>(false);
   const [showdBtn, setShowdBtn] = useState<boolean>(false);
-  const [birdSize, setBirdSize] = useState<number>(4);
+  const [birdSize, setBirdSize] = useState<number>(3);
   const vantaRef = useRef(null);
 
   let descriptionTimer: NodeJS.Timeout;
@@ -46,7 +30,12 @@ const HomePage: React.FC = () => {
       setShowdBtn(true);
     }, 7000);
 
-    return uninstall;
+    return () => {
+      uninstall();
+      if (vanta) {
+        vanta.destroy();
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -58,11 +47,6 @@ const HomePage: React.FC = () => {
         }),
       );
     }
-    return () => {
-      if (vanta) {
-        vanta.destroy();
-      }
-    };
   }, [vanta, birdSize]);
 
   useEffect(() => {
@@ -98,7 +82,7 @@ const HomePage: React.FC = () => {
             />
           </div>
           <div className="home-title ">
-            {titleData.map((item: TitleType, indexTitle: number) => {
+            {TITLE_DATA.map((item: TitleType, indexTitle: number) => {
               if (item.id === 'icon') {
                 return item.value;
               } else {
@@ -127,7 +111,7 @@ const HomePage: React.FC = () => {
           </div>
           {showdDescription && (
             <div className="home-description light">
-              {description
+              {`划此前端结界，闭环修炼，踩坑，历劫，励志飞升成"神"......`
                 .split('')
                 .map((letter: string, indexDescription: number) => (
                   <span

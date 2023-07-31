@@ -1,3 +1,6 @@
+import { UP_GRADE } from '@/constants';
+import type { TitleType } from './types';
+
 const BIRED_OPTION = {
   el: '',
   birdSize: 4,
@@ -7,4 +10,19 @@ const BIRED_OPTION = {
   width: '100px',
 };
 
-export { BIRED_OPTION };
+const TITLE_DATA: TitleType[] = [
+  {
+    id: 'first',
+    value: '踩坑升级',
+  },
+  {
+    id: 'icon',
+    value: UP_GRADE,
+  },
+  {
+    id: 'last',
+    value: '修成正果',
+  },
+];
+
+export { BIRED_OPTION, TITLE_DATA };
