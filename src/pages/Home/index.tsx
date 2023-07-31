@@ -111,7 +111,7 @@ const HomePage: React.FC = () => {
           </div>
           {showdDescription && (
             <div className="home-description light">
-              {`划此前端结界，闭环修炼，踩坑，历劫，励志飞升成"神"......`
+              {`划此前端结界，闭关修炼，沉静内心，踩坑，历劫，励志飞升成"神"......`
                 .split('')
                 .map((letter: string, indexDescription: number) => (
                   <span
