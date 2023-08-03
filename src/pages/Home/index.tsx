@@ -5,7 +5,7 @@ import BIRDS from 'vanta/dist/vanta.birds.min';
 import { BIRED_OPTION, TITLE_DATA } from './constants';
 import type { TitleType } from './types';
 import './style.scss';
-
+// 11
 const HomePage: React.FC = () => {
   const [vanta, setVanta] = useState<any>(0);
   const [showdDescription, setShowdDescription] = useState<boolean>(false);
