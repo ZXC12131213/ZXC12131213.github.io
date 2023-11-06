@@ -1,3 +1,2 @@
-import * as IMAGE from './images';
-import * as STYLE from './style';
-export { IMAGE, STYLE };
+export * from './images';
+export * from './style';

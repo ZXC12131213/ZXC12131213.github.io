@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import * as THREE from 'three';
 import * as style from './style';
-import { STYLE } from '@/constants';
+import { PINK } from '@/constants';
 const CubePage: React.FC = () => {
   useEffect(() => {
     const renderer = initCube();
@@ -40,7 +40,7 @@ const CubePage: React.FC = () => {
     //图形
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     //材质
-    const material = new THREE.MeshBasicMaterial({ color: STYLE.PINK });
+    const material = new THREE.MeshBasicMaterial({ color: PINK });
     //网格
     const cubeMesh = new THREE.Mesh(geometry, material);
     scene.add(cubeMesh);
