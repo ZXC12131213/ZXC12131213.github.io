@@ -58,6 +58,7 @@ const HomePage: React.FC = () => {
       }),
     );
   }, [birdSize]);
+  console.log(1111);
 
   const dealDelayTime = (index: number, type: number) => {
     const num = type === 0 ? 4 - index : index + 1;
