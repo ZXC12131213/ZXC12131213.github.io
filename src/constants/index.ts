@@ -1,2 +1,3 @@
-import { UP_GRADE } from './images';
-export { UP_GRADE };
+import * as IMAGE from './images';
+import * as STYLE from './style';
+export { IMAGE, STYLE };

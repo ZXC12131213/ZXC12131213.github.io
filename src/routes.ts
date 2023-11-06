@@ -13,6 +13,12 @@ const routes = [
   },
   {
     icon: 'PaperClipOutlined',
+    name: '方块示例',
+    path: '/cube',
+    component: './Cube',
+  },
+  {
+    icon: 'PaperClipOutlined',
     name: '贪吃蛇游戏(原生)',
     path: '/snake',
     component: './Snake',

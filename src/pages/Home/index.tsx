@@ -130,7 +130,7 @@ const HomePage: React.FC = () => {
             <div
               className="home-btn btn-shine"
               onClick={() => {
-                history.push('/snake');
+                history.push('/cube');
               }}
             >
               开战

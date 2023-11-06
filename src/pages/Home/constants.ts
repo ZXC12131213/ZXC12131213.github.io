@@ -1,4 +1,4 @@
-import { UP_GRADE } from '@/constants';
+import { IMAGE } from '@/constants';
 import type { TitleType } from './types';
 
 const BIRED_OPTION = {
@@ -17,7 +17,7 @@ const TITLE_DATA: TitleType[] = [
   },
   {
     id: 'icon',
-    value: UP_GRADE,
+    value: IMAGE.UP_GRADE,
   },
   {
     id: 'last',
