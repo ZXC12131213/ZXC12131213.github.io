@@ -5,7 +5,6 @@ import { PINK } from '@/constants';
 const CubePage: React.FC = () => {
   useEffect(() => {
     const renderer = initCube();
-
     return () => {
       const element = document.getElementById('cube');
       if (element) {
