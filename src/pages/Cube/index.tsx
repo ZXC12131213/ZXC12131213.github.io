@@ -15,7 +15,6 @@ const CubePage: React.FC = () => {
   const initCube = () => {
     //创建场景
     const scene = new THREE.Scene();
-
     //创建透视相机
     const camera = new THREE.PerspectiveCamera(
       75,
