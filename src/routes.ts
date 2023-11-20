@@ -13,7 +13,7 @@ const routes = [
   },
   {
     icon: 'PaperClipOutlined',
-    name: '方块示例',
+    name: 'three.js简单示例',
     path: '/cube',
     component: './Cube',
   },
