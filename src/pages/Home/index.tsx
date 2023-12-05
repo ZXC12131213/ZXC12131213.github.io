@@ -12,7 +12,6 @@ const HomePage: React.FC = () => {
   const [showdBtn, setShowdBtn] = useState<boolean>(false);
   const [birdSize, setBirdSize] = useState<number>(3);
   const vantaRef = useRef(null);
-  const a = '1';
 
   let descriptionTimer: NodeJS.Timeout;
   let btnTimer: NodeJS.Timeout;
